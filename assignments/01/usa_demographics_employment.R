@@ -275,3 +275,20 @@ sort(tapply (CPS$Race == "Asian", CPS$MetroArea, mean))
 # San Francisco-Oakland-Fremont, CA                              0.246753247
 # Honolulu, HI                                                   0.501903553
 
+
+# PROBLEM 3.6 - INTEGRATING METROPOLITAN AREA DATA  (1 point possible)
+
+# Normally, we would look at the sorted proportion of interviewees from each metropolitan area who
+# have not received a high school diploma with the command:
+
+sort(tapply(CPS$Education == "No high school diploma", CPS$MetroArea, mean))
+
+# However, none of the interviewees aged 14 and younger have an education value reported, so the
+# mean value is reported as NA for each metropolitan area. To get mean (and related functions, like
+# sum) to ignore missing values, you can pass the parameter na.rm = TRUE. Passing na.rm = TRUE to
+# the tapply function, determine which metropolitan area has the smallest proportion of interviewees
+# who have received no high school diploma.
+
+sort(tapply(CPS$Education == "No high school diploma", CPS$MetroArea, mean, na.rm = TRUE),
+decreasing = TRUE) #  Iowa City, IA  0.02912621
+
