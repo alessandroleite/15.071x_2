@@ -292,3 +292,61 @@ sort(tapply(CPS$Education == "No high school diploma", CPS$MetroArea, mean))
 sort(tapply(CPS$Education == "No high school diploma", CPS$MetroArea, mean, na.rm = TRUE),
 decreasing = TRUE) #  Iowa City, IA  0.02912621
 
+
+# PROBLEM 4.1 - INTEGRATING COUNTRY OF BIRTH DATA  (2 points possible)
+
+# Just as we did with the metropolitan area information, merge in the country of birth information
+# from the CountryMap data frame, replacing the CPS data frame with the result. If you accidentally
+# overwrite CPS with the wrong values, remember that you can restore it by re-loading the data frame
+# from CPSData.csv and then merging in the metropolitan area information using the command provided
+# in the previous subproblem.
+
+CPS = merge(CPS, CountryMap, by.x = "CountryOfBirthCode", by.y = "Code", all.x = TRUE)
+
+# What is the name of the variable added to the CPS data frame by this merge operation?
+
+#Country
+
+# How many interviewees have a missing value for the new country of birth variable?
+
+row(subset(CPS, is.na(Country)))
+
+# PROBLEM 4.2 - INTEGRATING COUNTRY OF BIRTH DATA  (2 points possible)
+
+# Among all interviewees born outside of North America, which country was the most common place of
+# birth?
+
+sort(table(CPS$Country)) # It's Philippines with 839. 
+
+# PROBLEM 4.3 - INTEGRATING COUNTRY OF BIRTH DATA  (2 points possible)
+
+# What proportion of the interviewees from the "New York-Northern New Jersey-Long Island, NY-NJ-PA"
+# metropolitan area have a country of birth that is not the United States? For this computation,
+# don't include people from this metropolitan area who have a missing country of birth.
+
+table (CPS$Country == "New York-Northern New Jersey-Long Island, NY-NJ-PA",
+	   CPS$Country != "United States")
+
+# From table(CPS$MetroArea == "New York-Northern New Jersey-Long Island, NY-NJ-PA", CPS$Country !=
+# "United States"), we can see that 1668 of interviewees from this metropolitan area were born
+# outside the United States and 3736 were born in the United States (it turns out an additional 5
+# have a missing country of origin). Therefore, the proportion is 1668/(1668+3736)=0.309.
+
+# PROBLEM 4.4 - INTEGRATING COUNTRY OF BIRTH DATA  (3 points possible)
+
+# Which metropolitan area has the largest number (note -- not proportion) of interviewees with a
+# country of birth in India? Hint -- remember to include na.rm = TRUE if you are using tapply() to
+# answer this question.
+
+# EXPLANATION
+
+# To obtain the number of TRUE values in a vector of TRUE/FALSE values, you can use the sum()
+# function. For instance, sum(c(TRUE, FALSE, TRUE, TRUE)) is 3. Therefore, we can obtain counts of
+# people born in a particular country living in a particular metropolitan area with:
+
+sort(tapply(CPS$Country == "India",   CPS$MetroArea, sum, na.rm = TRUE))
+sort(tapply(CPS$Country == "Brazil",  CPS$MetroArea, sum, na.rm = TRUE))
+sort(tapply(CPS$Country == "Somalia", CPS$MetroArea, sum, na.rm = TRUE))
+
+# We see that New York has the most interviewees born in India (96), Boston has the most born in
+# Brazil (18), and Minneapolis has the most born in Somalia (17).
