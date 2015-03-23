@@ -1,0 +1,60 @@
+
+In this class, we'll be using R to work with data
+and build models.
+But what is R?
+R is a software environment for data analysis,
+statistical computing, and graphics.
+It is also a programming language
+which is natural to use and allows
+you to complete data analyses in just a few lines.
+We won't be doing much programming in class,
+and almost everything we ask you to do
+can be completed in a few lines.
+There's a lot more that you can do with R
+than just what we teach in this class,
+but you will have a good understanding of R
+and how to use it in just a few weeks.
+R originated from the statistical programming
+language S, which was developed by John Chambers
+while at Bell Labs in the 1970s.
+The first version of R was developed
+by Robert Gentlemen and Ross Ihaka
+at the University of Auckland in the mid-1990s.
+They wanted a better statistical software
+to use in their Macintosh teaching laboratory
+and decided to create their own.
+They also released it as an open-sourced alternative to S
+and encouraged others to download and help
+develop the software.
+There are many choices for data analysis
+software available today.
+In addition to R, some popular examples
+are SAS, Stata, SPSS, Excel and Excel add-ons, MATLAB, Minitab,
+and pandas in Python.
+So, why are we using R?
+R is free and open-sourced and is
+available on all platforms, Mac, Windows, and Linux.
+R is also widely used.
+There are more than two million users around the world.
+This means that new features are being developed all the time,
+and there are a lot of community resources for R.
+Additionally, R makes it easy to re-run previous work
+and to make adjustments.
+R also has nice graphics and visualizations.
+We will just be using the R command line interface.
+However, if you would like to try a graphical user
+interface, or GUI, there are many choices.
+Two popular choices are RStudio and Rattle.
+
+There are many R resources available online.
+In addition to the official R page and the download page,
+there are many helpful websites.
+Here are a few popular ones.
+In general, though, if you're looking for a command
+or how to do something in R, try googling it.
+Often, if you just try typing "R" and then what you're
+looking for in a search engine, you
+can find some very helpful posts and websites.
+We want to emphasize, though, that the best way to learn R
+is through trial and error.
+So, let's get started working in R.

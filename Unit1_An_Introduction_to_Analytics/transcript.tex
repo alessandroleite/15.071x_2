@@ -1,0 +1,60 @@
+\documentclass[10pt,letterpaper,titlepage, fullpage]{article}
+\usepackage{fullpage}
+\usepackage{ifpdf}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm,amssymb,mathtools,amsfonts}
+\usepackage{listings,rotating}
+\usepackage{array}
+\usepackage{eqparbox}
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage{caption}
+\usepackage{url}
+\usepackage[acronym,nonumberlist,toc]{glossaries}
+\usepackage{colortbl}
+\usepackage{booktabs,longtable,tabularx,ltxtable,multirow}%
+\usepackage{flushend}
+% \usepackage[subtle]{savetrees}
+\usepackage{import}
+\usepackage{paralist}
+\usepackage{nameref}
+\usepackage{etoolbox}
+\usepackage{microtype}
+\usepackage[capitalise]{cleveref}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\crefname{equation}{equation}{equations}
+\crefname{figure}{figure}{figures}
+
+% ---------- New Commands ----------
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\newcommand{\mcbf}[2]{\multicolumn{#1}{c}{\textbf{#2}}}
+
+\newcommand{\ie}{i.e., }
+\newcommand{\eg}{e.g., }
+\newcommand*{\hurl}[1]{\href{http://#1}{\emph{#1}}}
+% \newcommand*{\hurl}[1]{\url{#1}}
+
+\renewcommand*{\cref}[1]{\Cref{#1}}
+
+% \newcommand{\subparagraph}{}
+
+\begin{document}
+
+\section{The Analytics Edge: Intelligence, Happiness, and Health}
+  \import{1.the_Analytics_Edge_Intelligence_Happiness_and_Health/}{analytics_edge}
+
+\section{Working with Data: An Introduction to R}
+
+\section{Understanding Food: Nutritional Education with Data (Recitation)}
+
+% that's all folks
+\end{document}
